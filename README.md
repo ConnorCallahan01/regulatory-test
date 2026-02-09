@@ -1,2 +1,12 @@
 # regulatory-test
-Oliver project repository for 85e62eb0-d851-4a1d-9013-5a5841ce5c0d
+
+Oliver project repository.
+
+## Folder Structure
+
+- `repository/workflow-analysis/`
+- `repository/business-case/`
+- `repository/ai-opportunity-assessment/`
+- `repository/functional-prototype/`
+- `repository/technical-specifications/`
+- `repository/meeting-notes/`
