@@ -1,0 +1,31 @@
+# Regulatory Tracker - User Journey and Decision Points
+
+**Source**: repository/workflow-analysis/Regulatory Tracker - User Journey and Decision Points.md
+**Type**: Design Document
+**Upload Date**: 2026-02-09
+**Source SHA**: Not provided
+
+## Key Points
+
+- The Regulatory Tracker is an AI-powered application that monitors regulatory changes across configurable domains (e.g., AML) and jurisdictions using Claude AI for automated analysis and decision support
+- User journey spans seven phases from initial dashboard access through scan configuration, backend orchestration, results review, workflow management, knowledge store curation, and document export
+- Backend agent orchestration includes six execution stages: initializing, retrieving sources, detecting changes via keyword analysis, AI-powered impact analysis, confidence scoring with human review flags, and artifact generation
+- Claude AI analyzes each regulatory document to determine relevance, impact level (Low/Medium/High/Critical), affected compliance areas, recommended actions, and confidence scores
+- Items with confidence scores below 0.7 or requiring human review are flagged; verified items transition through a workflow (Draft → In Review → Verified) before being added to a searchable knowledge store
+- System generates professional Word documents (.docx) and markdown artifacts for compliance documentation and export
+
+## Entities and Topics
+
+- **Regulatory Tracker**: AI-powered compliance monitoring application that automates regulatory change detection and analysis
+- **ScanOrchestrator**: Backend component coordinating the multi-stage scan pipeline with state management and error handling
+- **Claude API (claude-sonnet-4)**: AI model performing regulatory document analysis for relevance, impact assessment, and recommendation generation
+- **ChangeDetectionService**: Component detecting material regulatory changes through content hashing and keyword pattern matching
+- **LLMService**: Integration layer managing Claude API requests, prompt construction, and JSON response parsing
+- **ArtifactGenerator**: Component creating markdown summaries and Word documents for compliance records
+- **Mock Regulatory Sources**: FinCEN CDD Amendment, FinCEN SAR Advisory, OCC Transaction Monitoring Guidance, Federal Reserve AML Procedures
+- **Workflow States**: Draft, In Review, and Verified statuses tracking compliance team review progress
+- **Knowledge Store**: Searchable archive of verified regulatory items with export and filtering capabilities
+
+## Relevance to Project
+
+This document provides comprehensive architectural and UX design documentation for the Regulatory Tracker system, detailing the complete user workflow from scan initiation through compliance documentation export. It serves as essential reference material for understanding the agentic backend orchestration, AI decision-making integration, and multi-stage workflow pipeline that drives regulatory compliance automation.
